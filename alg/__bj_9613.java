@@ -1,3 +1,4 @@
+package alg;
 import java.util.Scanner;
 
 public class bj_9613 {
@@ -17,10 +18,14 @@ public class bj_9613 {
 		}
 	}
 
-	public static int gcd(int a, int b) {
 
+	public static int gcd(int a, int b) {
+		while(b != 0) {
+			int r = a % b;
+			a = b;
+			b = r;
+		}
+		return a;
 	}
-	public static int lcm(int a, int b) {
-		
-	}
+
 }
