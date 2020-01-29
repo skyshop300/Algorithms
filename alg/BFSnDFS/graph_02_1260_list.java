@@ -1,7 +1,7 @@
 package alg.BFSnDFS;
 import java.util.*;
 
-public class bj_02_1260 {
+public class graph_02_1260_list {
 	static ArrayList<Integer>[] list;	//인접리스트
 	static boolean[] check;				
 
@@ -40,20 +40,6 @@ public class bj_02_1260 {
 		sc.close();
 	}
 
-	// DFS 인접행렬
-	// public static void dfsMatrix(int x) {
-	// 	if(check[x]) {
-	// 		return;
-	// 	}
-	// 	check[x] = true;
-	// 	System.out.print(x + " ");
-	// 	for(int y: list[x]) {
-	// 		if(a[x][i] == 1 && check[i] == false) {
-	// 			dfsMatrix(i);
-	// 		}
-	// 	}
-	// }
-
 	// DFS 인접리스트
 	public static void dfsList(int x) {
 		if(check[x]) {
@@ -66,11 +52,6 @@ public class bj_02_1260 {
 				dfsList(y);
 			}
 		}
-	}
-
-	// BFS 인접행렬
-	public static void bfsMatrix(int x) {
-
 	}
 
 	// BFS 인접리스트
