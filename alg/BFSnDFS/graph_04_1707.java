@@ -1,3 +1,4 @@
+// 백준 1707: 그래프 - 
 package alg.BFSnDFS;
 import java.util.*;
 
@@ -30,6 +31,7 @@ public class graph_04_1707 {
 			}
 
 			state = new int[v + 1];
+			// 돌아가면서 체크한다
 			for(int j = 1; j < v + 1; j++) {
 				if(state[j] == 0) {
 					state[j] = 1;
