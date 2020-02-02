@@ -45,7 +45,6 @@ public class graph_05_2667 {
 		// 상
 		if(i > 0) {
 			houseNum += dfs(map, visit, i - 1, j);
-			
 		}
 		// 우
 		if(j < map.length - 1) {
