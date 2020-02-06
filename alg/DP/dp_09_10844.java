@@ -22,8 +22,6 @@ public class dp_09_10844 {
 				d[i][j] = (d[i-1][j-1] + d[i-1][j+1]) % 1000000000;
 			}
 		}
-
-
 		for(int i = 0; i < 10; i++) {
 			answer = (answer + d[n][i]) % 1000000000;
 		}
