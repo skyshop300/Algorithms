@@ -9,14 +9,14 @@ public class graph_08_7576 {
 		Scanner sc = new Scanner(System.in);
 		int m = sc.nextInt();	// 상자의 가로 칸 수 
 		int n = sc.nextInt();	// 상자의 세로 칸 수
-		Queue<Dot> queue = new LinkedList<Dot>();
+		Queue<Dot_7576> queue = new LinkedList<Dot_7576>();
 		int map[][] = new int[n][m];
 
 		for(int i = 0; i < n; i++) {
 			for(int j = 0; j < m; j++) {
 				map[i][j] = sc.nextInt();
 				if(map[i][j] == 1) {
-					queue.add(new Dot(i, j));
+					queue.add(new Dot_7576(i, j));
 				}
 			}
 		}
@@ -25,7 +25,7 @@ public class graph_08_7576 {
 		System.out.println(day);
 		sc.close();
 	}
-	public static int bfs(int[][] map, Queue<Dot> queue) {
+	public static int bfs(int[][] map, Queue<Dot_7576> queue) {
 		int day = -1;
 		int oneDayTomatoNum = 0;
 		while(!queue.isEmpty()) {
@@ -33,7 +33,7 @@ public class graph_08_7576 {
 				oneDayTomatoNum = queue.size();
 				day++;
 			}
-			Dot dot = queue.poll();
+			Dot_7576 dot = queue.poll();
 			int x = dot.x;		// 가장 먼저 보관한 값 꺼내기.
 			int y = dot.y;
 
@@ -44,7 +44,7 @@ public class graph_08_7576 {
 				if(nx >= 0 && nx < map.length && ny >= 0 && ny < map[0].length
 						&& map[nx][ny] == 0) {
 					map[nx][ny] = 1;
-					queue.add(new Dot(nx, ny));
+					queue.add(new Dot_7576(nx, ny));
 				}
 			}
 			oneDayTomatoNum--;
@@ -68,10 +68,10 @@ public class graph_08_7576 {
 	}
 }
 
-class Dot {
+class Dot_7576 {
 	int x;
 	int y;
-	public Dot(int x, int y) {
+	public Dot_7576(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
