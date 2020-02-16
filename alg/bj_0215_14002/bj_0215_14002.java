@@ -24,7 +24,6 @@ public class bj_0215_14002 {
 					}
 				} 
 			}
-
 		}
 		
 		int[] nums = new int[dp[maxIndex]];
