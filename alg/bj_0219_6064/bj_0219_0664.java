@@ -52,7 +52,6 @@ public class bj_0219_0664 {
 					answer = x;
 				}
 			}
-			
 			System.out.println(answer);
 		}
 	}
