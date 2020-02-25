@@ -1,7 +1,7 @@
 package alg.programmars;
 import java.util.*;
 
-public class pr_43165 {
+public class pr_0224_43165 {
 	public static void main(String[] args) {
 		int[] numbers = {1,1,2};
 		int target = 4;

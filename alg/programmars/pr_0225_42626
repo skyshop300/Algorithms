@@ -1,0 +1,45 @@
+// 프로그래머스 42626 - 더 맵게
+package alg.programmars;
+import java.util.*;
+
+public class pr_42626 {
+	public static void main(String[] args) {
+		int[] scoville = {1,2,3,9,10,12};
+		int K = 7;
+
+		Solution sol = new Solution();
+		sol.solution(scoville, K);
+		
+	}
+}
+
+class Solution {
+    public int solution(int[] scoville, int K) {
+		Stack<Integer> scovilleStack = new Stack<>();
+		Queue<Integer> tempQ = new LinkedList<>();
+		int min = soville[0];
+		
+        int answer = 0;
+		for(int i = 0; i < scoville.length; i++) {
+			scovilleStack.add = scoville[i];
+		}
+
+		
+		while(min <= K) {
+			int a = scovilleDq.pop();
+			int b = scovilleDq.peek();
+			int c = q.peek();
+			if(c < a) {
+				b = a;
+				c = q.poll();
+			} else if(c < b) { 
+				b = c;
+			}
+			int sum = a + (b * 2);
+			if(sum < K) {
+
+			}
+		}
+        return answer;
+    }
+}
