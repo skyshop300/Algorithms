@@ -19,7 +19,6 @@ class Solution {
 		Queue<Integer> tempQ = new LinkedList<>();
 		int min = soville[0];
 		
-        int answer = 0;
 		for(int i = 0; i < scoville.length; i++) {
 			scovilleStack.add = scoville[i];
 		}
@@ -31,15 +30,20 @@ class Solution {
 			int c = q.peek();
 			if(c < a) {
 				b = a;
-				c = q.poll();
+				a = q.poll();
 			} else if(c < b) { 
-				b = c;
+				b = q.poll();
+			} else {
+				b = scovilleDq.pop();
+			}
+			if(a <= K) {
+				break;
 			}
 			int sum = a + (b * 2);
 			if(sum < K) {
-
+				q.add(sum);
 			}
 		}
-        return answer;
+        return a;
     }
 }
