@@ -22,7 +22,7 @@ public class bj_0215_14002 {
 					if(dp[maxIndex] < dp[i]) {
 						maxIndex = i;
 					}
-				} 
+				}
 			}
 		}
 		
