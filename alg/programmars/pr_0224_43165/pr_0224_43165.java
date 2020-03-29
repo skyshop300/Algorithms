@@ -1,4 +1,6 @@
-package alg.programmars;
+// 프로그래머스 - DFS/BFS - 타겟 넘버
+// BFS 풀이
+package alg.programmars.pr_0224_43165;
 import java.util.*;
 
 public class pr_0224_43165 {

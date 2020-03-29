@@ -1,7 +1,7 @@
-package alg.programmars.pr_0310_49189;
+package alg.programmars.pr_0310_42578;
 import java.util.*;
 
-public class pr_49189 {
+public class pr_42578 {
 	public static void main(String[] args) {
 		String[][] clothes = {{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"}};
 		// String[][] clothes = {{"crow_mask", "face"}, {"blue_sunglasses", "face"}, {"smoky_makeup", "face"}};
@@ -26,5 +26,4 @@ class Solution {
 
 		return answer-1;
 	}
-
 }

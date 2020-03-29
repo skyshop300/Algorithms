@@ -1,0 +1,27 @@
+// 프로그래머스 - 해쉬 - 베스트앨범
+package alg.hash_0327_pr42579;
+import java.util.*;
+
+public class hash_0327_pr42579 {
+	public static void main(String[] args) {
+		Solution sol = new Solution();
+		String[] genres = {"classic", "pop", "classic", "classic", "pop"};
+		int[] plays = {500, 600, 150, 800, 2500};
+		System.out.println(sol.solution(genres, plays));
+	}
+}
+
+class Solution {
+    public int[] solution(String[] genres, int[] plays) {
+        int[] answer = {};
+		Map<String, Integer> map = new HashMap<>();
+		for(int i = 0; i < genres.length; i++) {
+			String genre = genres[i];
+			int play = plays[i];
+			map.put(genre, map.getOrDefault(genre, 0) + play);
+		}
+		
+		
+        return answer;
+    }
+}

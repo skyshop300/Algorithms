@@ -1,4 +1,4 @@
-package alg.programmars;
+package alg.programmars.pr_0224_42576;
 import java.util.*;
 public class pr_0224_42576 {
     public static void main(String[] args) {
