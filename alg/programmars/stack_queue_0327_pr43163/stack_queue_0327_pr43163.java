@@ -23,14 +23,16 @@ class Solution {
 		int currQSize = 1;
 		q.add(begin);	// begin
 
-		// 목표에 도달할 경우, Queue가 비어버릴 경우
+		// 목표에 도달할 때 까지
 		while(!currWord.equals(target)){
+
+			// 목표에 도달하지 못했는데, Queue가 비어 있을 경우 
 			if(q.isEmpty()) {
 				answer = 0;
 				break;
 			}
 
-			// 몇 번째 Depth인지 체크
+			// answer: 현재 몇 번째 Depth인지 체크
 			if(currQSize == 0) {
 				currQSize = q.size();
 				answer++;
@@ -58,8 +60,6 @@ class Solution {
 				}
 			}
 		}
-		
-
 		return answer;
     }
 }
