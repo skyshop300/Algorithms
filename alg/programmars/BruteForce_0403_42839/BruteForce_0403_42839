@@ -1,0 +1,22 @@
+// 프로그래머스 - 소수찾기
+// #중복순열 #소수찾기
+package alg.programmars.BruteForce_0403_42839;
+import java.util.*;
+
+public class BruteForce_0403_42839 {
+	public static void main(String[] args) {
+		Solution sol = new Solution();
+		String numbers = "011";
+		System.out.println(sol.solution(numbers));
+	}
+}
+
+
+// 중복순열.
+class Solution {
+	public int solution(String numbers) {
+		
+		int answer = 0;
+		return answer;
+	}
+}

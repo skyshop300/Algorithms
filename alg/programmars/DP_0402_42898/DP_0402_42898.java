@@ -23,7 +23,6 @@ class Solution {
 			puddlesMap[puddles[i][0]][puddles[i][1]] = true;
 		}
 
-
 		for(int i = 1; i < m + 1; i++) {
 			for(int j = 1; j < n + 1 ; j++) {
 				if(!puddlesMap[i][j]) {
