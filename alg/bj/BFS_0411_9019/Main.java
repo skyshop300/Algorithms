@@ -13,6 +13,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 public class Main {
 	public static void main(String[] args) {
+		Runtime.getRuntime().gc();
+		// 비교 직전에 gc 를 사용해서 garbage collection을 실행하도록 하면 보다 더 정확하게 메모리 소비량을 얻을 수 있다.
+		
 		Scanner sc = new Scanner(System.in);
 		int T =  sc.nextInt();
 		for(int i = 0; i < T; i++) {
@@ -21,6 +24,10 @@ public class Main {
 			int B = sc.nextInt();
 			sol.solution(A, B);	
 		}
+
+		long used = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+
+		System.out.println("used memory is " + used + " bytes");
 	}
 }
 

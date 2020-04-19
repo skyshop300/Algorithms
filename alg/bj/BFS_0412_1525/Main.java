@@ -4,7 +4,8 @@ import java.util.*;
 public class Main {
 	public static void main(String[] args) {
 		Runtime.getRuntime().gc();
-		// 비교 직전에 gc 를 사용해서 garbage collection을 실행하도록 하면 보다 더 정확하게 메모리 소비량을 얻을 수 있다. 
+		// 비교 직전에 gc 를 사용해서 garbage collection을 실행하도록 하면 보다 더 정확하게 메모리 소비량을 얻을 수 있다.
+
 		Scanner sc = new Scanner(System.in);
 		Solution sol = new Solution();
 
@@ -16,12 +17,11 @@ public class Main {
 			}
 		}
 		System.out.println(sol.solution(puzzle));
-		
-		
 
 		long used = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 
 		System.out.println("used memory is " + used + " bytes");
+		
 	}
 }
 class Solution {
@@ -31,7 +31,7 @@ class Solution {
 		Map<Integer, Boolean> visit = new HashMap<>();	// String: 전체 map // Intger: 0이 저장된 index;
 		Queue<Integer> q = new LinkedList<>();
 		
-		DOT dot = whereDOT(puzzle); 
+		//  dot = whereDOT(puzzle); 
 
 		String currPuzzleStr = Integer.toString(puzzleToInt(puzzle));
 		currPuzzleStr = currPuzzleStr.replace('0', '9');
@@ -60,7 +60,7 @@ class Solution {
 			int nine = Integer.toString(currPuzzleInt).indexOf("9");
 			int x = nine % 3;
 			int y = nine / 3;
-			dot = new DOT(x, y);		// 빼먹었다...
+			DOT dot = new DOT(x, y);		// 빼먹었다...
 			
 			// map 이동
 			for(int i = 0; i < 4; i++) {
@@ -75,6 +75,7 @@ class Solution {
 				int nextPuzzleInt= swap(currPuzzleInt, dot, nextDot);
 				// q에 저장
 				if (!visit.containsKey(nextPuzzleInt)) {
+					// System.out.println(nextPuzzleInt);
 					if(nextPuzzleInt == 123456789) {
 						return depth;
 					}
